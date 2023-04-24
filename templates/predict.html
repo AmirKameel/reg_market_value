@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Predict</title>
+{% endblock %}
+
+
+
+{% block body %}
+<br>
+<h2>Predict</h2>
+<hr>
+<br>
+
+<form action="/predict" , method="POST">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="Goals">Goals</label>
+            
+            <input class="form-control" type="number" , step="1" name="Goals" id="Goals" placeholder="Num of Goals that the player scored"
+                aria-label="Enter Goals">
+            <small id="longhelp" class="form-text text-muted">This Field is required.</small>
+            <br>
+
+            <label for="Assist">Assist</label>
+            <input class="form-control" type="number" , step="1" name="Assist" id="Assist"
+                placeholder="Num of Assists that the player made " aria-label="Enter Assist">
+            <small id="latithelp" class="form-text text-muted">This Field is required.</small>
+            <br>
+
+            <label for="Pass">Passes</label>
+            <input class="form-control" type="number" , step="1" name="Pass" id="Pass"
+                placeholder="Num of all passes that the player made" aria-label="Enter pass">
+            <small id="agehelp" class="form-text text-muted">This Field is required.</small>
+            <br>
+
+            <label for="PassCompleted">passcomplete</label>
+            <input class="form-control" type="number" , step="1" name="PassCompleted" id="PassCompleted"
+                placeholder="Num of completed passes that the player made" aria-label="Enter passcomplete">
+            <small id="bedhelp" class="form-text text-muted">This Field is required.</small>
+            <br>
+
+            <label for="Tackle_Won">tackle</label>
+            <input class="form-control" type="number" , step="1" name="Tackle_Won" id="Tackle_Won" placeholder="Num of taclings that the player won it"
+                aria-label="Num of successfull tacklings that the player done">
+            <small id="holdhelp" class="form-text text-muted">This Field is required.</small>
+            <br>
+
+            <label for="AerWon">Aerwon</label>
+            <input class="form-control" type="number" , step="1" name="AerWon" id="AerWon" placeholder="Num of Aerial wons that the player won"
+                aria-label="Num of Aerial wons that the player done">
+            <small id="pophelp" class="form-text text-muted">This Field is required.</small>
+            <br>
+
+
+            <label for="Cross">Crosses</label>
+            <input class="form-control" type="number" , step="1" name="Cross" id="Cross"
+                placeholder="Enter cross" aria-label="Enter cross">
+            <small id="totalhelp" class="form-text text-muted">This Field is required.</small>
+            <br>
+
+            
+            
+
+            
+
+            <label for="CrossCompleted">crosscomplete</label>
+            <input class="form-control" type="number" , step="1" name="CrossCompleted" id="CrossCompleted"
+                placeholder="Enter crosscomplete" aria-label="Enter crosscomplete">
+            <small id="incomehelp" class="form-text text-muted">This Field is required.</small>
+            <br>
+            
+            <label for="income">Aerlost</label>
+            <input class="form-control" type="number" , step="1" name="Aerlost" id="Aerlost"
+                placeholder="Enter Aerlost" aria-label="Enter Aerlost">
+            <small id="incomehelp" class="form-text text-muted">This Field is required.</small>
+            <br>
+
+
+            
+            <br>
+            <input class="btn btn-success btn-lg btn-block" type="submit" value="Predict">
+            <hr>
+            <h5> market value is :    {{ pred_val }}</h5>
+            <hr>
+        </div>
+</form>
+
+{% endblock %}
