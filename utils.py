@@ -18,6 +18,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.pipeline import Pipeline, FeatureUnion
 #pip install sklearn_features
 from sklearn_features.transformers import DataFrameSelector
+from markupsafe import escape
 
 
 ## Read the CSV file using pandas
